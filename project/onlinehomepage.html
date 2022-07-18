@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online shopping site for book,calculator and more</title>
+    <link rel="shortcut icon" href="img/skillbig logo.jpeg" type="image/x-icon">
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        nav {
+            display: flex;
+            height: 60px;
+            background-color: #000000;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .logo {
+            display: flex;
+        }
+
+        .logo img {
+            padding: 10px;
+            width: 140px;
+        }
+
+        .search {
+            display: flex;
+            background-color: white;
+            width: 35vw;
+            height: 36px;
+            border-radius: 5px;
+            margin: 20px;
+        }
+
+        .search input {
+            height: 36px;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+            padding: 0 16px;
+            border: 0;
+            outline: none;
+        }
+
+        .btn {
+            border: 0;
+            cursor: pointer;
+            background: transparent;
+            padding: 6px 10px;
+        }
+
+        .icons {
+            margin: 10px;
+        }
+
+        .btn img {
+            width: 22px;
+        }
+
+        #profile img {
+            width: 30px;
+        }
+
+        #cart img {
+            width: 40px;
+        }
+
+        .items {
+            margin: 10px;
+            width: 48.2%;
+            display: inline-block;
+            box-sizing: border-box;
+            border: 2px solid black;
+
+        }
+
+        .image {
+            width: 100%;
+        }
+
+        .button {
+            width: 100%;
+            border: 0;
+            cursor: pointer;
+            height: 50px;
+            font-size: 25px;
+
+        }
+
+        .special {
+            width: 1480px;
+            height: 300px;
+        }
+
+        .id {
+            width: 73%;
+            background-color: black;
+        }
+
+        footer {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-family: 'cabin', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#" class="logo"><img src="img/blacklogo.png"></a>
+        <div class="search">
+            <input type="text" placeholder="search for products">
+            <button class="btn"><img src="img/searchicon.png"></button>
+        </div>
+        <a href="#" class="icons" id="profile"><img src="img/profileicon.png"></a>
+        <a href="#" class="icons" id="cart"><img src="img/cartwhite.jpg"></a>
+    </nav>
+    <div class="offer">
+        <img src="img/special offer image.jpg" class="special">
+    </div>
+    <div class="items">
+        <img src="img/Questionbank.png" class="image">
+        <a href="questionbank.html"><button class="button"> Buy Latest Question Bank</button></a>
+    </div>
+    <div class="items">
+        <img src="img/calculators.jpg" class="image">
+        <a href="calculator.html"><button class="button">Buy Latest Calculator</button></a>
+    </div>
+    <div class="items">
+        <img src="img/bookimage.jpg" class="image">
+        <a href="book.html"><button class="button"> Buy Latest Book</button></a>
+    </div>
+    <div class="items">
+        <img src="img/drafter.png" class="id">
+        <a href=""><button class="button">Buy Drafter</button></a>
+    </div>
+    <footer>
+        <div>Copyright &copy; skillbig.com - All rights reserved</div>
+    </footer>
+</body>
+
+</html>

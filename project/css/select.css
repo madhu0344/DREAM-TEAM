@@ -1,0 +1,100 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+nav {
+    display: flex;
+    height: 60px;
+    background-color: #000000;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    padding: 10px;
+    width: 140px;
+}
+
+.search {
+    display: flex;
+    background-color: white;
+    width: 35vw;
+    height: 36px;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.search input {
+    height: 36px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    padding: 0 16px;
+    border: 0;
+    outline: none;
+}
+
+.btn {
+    border: 0;
+    cursor: pointer;
+    background: transparent;
+    padding: 6px 10px;
+}
+
+.icons {
+    margin: 10px;
+}
+
+.btn img {
+    width: 22px;
+}
+
+#profile img {
+    width: 30px;
+}
+
+#cart img {
+    width: 40px;
+}
+
+.calci {
+    margin: 10px;
+    width: 48.2%;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+.class {
+    width: 100%;
+}
+
+.button {
+    margin: 5px;
+    padding: 5px;
+    width: 98%;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 2px solid black;
+    cursor: pointer;
+    background-color: rgb(229, 99, 52);
+    font-size: 25px;
+}
+
+.checked {
+    color: orange;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: 'cabin', sans-serif;
+}
