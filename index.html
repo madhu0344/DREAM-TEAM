@@ -1,0 +1,572 @@
+<html>
+
+<head>
+  <title>skill big</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+  <link rel="shortcut icon" href="logoforpro-removebg-preview.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js ">
+  </script>
+
+  <script src="script.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: rgba(15, 107, 122, 1);
+      margin: 0px;
+      padding: 0px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    /* Style the navigation bar */
+    .navbar {
+
+
+      background-color: rgba(10, 105, 120, 0);
+      overflow: auto;
+    }
+
+    /* Navbar links */
+    .navbar a {
+      float: right;
+      text-align: center;
+      padding: 25px;
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      border-radius: 50px;
+    }
+
+    /* Navbar links on mouse-over */
+    .navbar a:hover {
+      background-color: black;
+      box-shadow: 2px 2px 24px 2px white;
+    }
+
+    /* Current/active navbar link */
+    .active {
+      background-color: #15bc7f;
+    }
+
+    /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+    @media screen and (max-width: 500px) {
+      .navbar a {
+        float: none;
+        display: block;
+      }
+    }
+
+
+
+    /* Button used to open the contact form - fixed at the bottom of the page */
+    .open-top {
+      background-color: #555;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
+      position: fixed;
+      top: 23px;
+      right: 28px;
+      width: 280px;
+    }
+
+    /* The popup form - hidden by default */
+    .form-popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 15px;
+      border: 3px solid #f1f1f1;
+      z-index: 9;
+    }
+
+    /* Add styles to the form container */
+    .form-container {
+      max-width: 300px;
+      padding: 10px;
+      background-color: white;
+    }
+
+    /* Full-width input fields */
+    .form-container input[type=text],
+    .form-container input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    }
+
+    /* When the inputs get focus, do something */
+    .form-container input[type=text]:focus,
+    .form-container input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    /* Set a style for the submit/login button */
+    .form-container .btn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 10px;
+      opacity: 0.8;
+    }
+
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+      background-color: red;
+    }
+
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover,
+    .open-button:hover {
+      opacity: 1;
+    }
+
+
+
+
+
+
+
+    .bn {
+      margin: 0;
+      padding: 0%;
+      width: 80px;
+      display: flexbox;
+
+
+    }
+
+
+    /*  slider section css */
+
+
+    .slide {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      width: 100%;
+      height: 90vh;
+      overflow-x: hidden;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-top: -20px;
+    }
+
+    .slide1 {
+      background-image: url("temdre.jpeg");
+    }
+
+    .slide2 {
+      background-image: url("fri.jpeg");
+    }
+
+    .slide3 {
+      background-image: url("group.jpeg");
+    }
+
+    .slide4 {
+      background-image: url("thanku.jpeg");
+    }
+
+    .arrow {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      margin-top: -35px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    #arrow-left {
+      border-width: 20px 30px 20px 0;
+      border-color: transparent rgb(7, 6, 11)transparent transparent;
+      left: 0;
+      margin-left: 20px;
+    }
+
+    #arrow-right {
+      border-width: 20px 0 20px 30px;
+      border-color: transparent transparent transparent rgb(7, 6, 11);
+      right: 0;
+      margin-right: 20px;
+    }
+
+
+    h1 {
+      color: dodgerblue;
+      text-shadow: 2px 3px 4px #f1f1f1;
+    }
+
+
+    img {
+      border-radius: 50%;
+      margin: 60px;
+
+      transition: transform .15s cubic-bezier(.11, .65, 1, 1.69);
+    }
+
+    img:hover {
+      transform: scale(1.3);
+    }
+
+
+
+
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "seoge UI";
+      font-weight: 400;
+    }
+
+    .footer {
+      padding: 40px 0;
+      background-color: rgb(240, 227, 227);
+      margin-top: 0;
+    }
+
+    .footer .social {
+
+      text-align: center;
+      padding-bottom: 25px;
+      color: #5f84a7;
+    }
+
+    .footer .social a {
+      font-size: 24px;
+      color: inherit;
+      border: 1px solid rgb(237, 228, 228);
+      width: 40px;
+      height: 40px;
+      line-height: 38px;
+      display: inline-block;
+      text-align: center;
+      border-radius: 90%;
+      margin: 0 8px;
+      opacity: 0.75;
+    }
+
+    .footer .social a:hover {
+
+      opacity: 0.9;
+
+    }
+
+    .footer ul {
+      margin-top: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    .footer ul li a {
+      color: inherit;
+      text-decoration: none;
+      opacity: 0.8;
+    }
+
+
+    .footer ul li {
+      display: inline-block;
+      padding: 0 15px;
+    }
+
+    .footer ul li a:hover {
+
+      opacity: 2;
+    }
+
+    h3 {
+
+      margin-top: 15px;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      color: rgb(0, 0, 0);
+    }
+
+
+
+
+
+    .nam {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      font-family: 'Kanit', sans-serif;
+    }
+
+    .nav-down {
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+
+    }
+
+    .nav-5 {
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+
+    .nav-4 {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      font-family: 'Kanit', sans-serif;
+    }
+
+
+    .nav-4 a {
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Load an icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <div class="navbar">
+    <img src="logoforpro-removebg-preview.png" class="bn">
+    <a href="newlogin.html" target="_blank">Login</a>
+    <a href="contact.html" target="_blank "> Contact us</a>
+    <a href="about.html" target="_blank">About us</a>
+    <a href="https://www.javatpoint.com/discrete-mathematics-mcq" target="_blank">quiz</a>
+    <a href="notes/cse.html" target="_blank">Notes</a>
+    <a href="course/course.html" target="_blank">Course</a>
+    <a href="project/onlinehomepage.html" target="">Shopping</a>
+    <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+  </div>
+
+
+  <div id="arrow-left" class="arrow"></div>
+  <div class="slide slide1"></div>
+  <div class="slide slide2"></div>
+  <div class="slide slide3"></div>
+  <div class="slide slide4"></div>
+  <div id="arrow-right" class="arrow"></div>
+
+  <script>
+    let sliderImages = document.querySelectorAll(".slide"),
+      arrowLeft = document.querySelector("#arrow-left"),
+      arrowRight = document.querySelector("#arrow-right"),
+      current = 0;
+
+    // Clear all images
+    function reset() {
+      for (let i = 0; i < sliderImages.length; i++) {
+        sliderImages[i].style.display = "none";
+      }
+    }
+
+    // Initial slide
+    function startSlide() {
+      reset();
+      sliderImages[0].style.display = "block";
+    }
+
+    // Show previous
+    function slideLeft() {
+      reset();
+      sliderImages[current - 1].style.display = "block";
+      current--;
+    }
+
+    // Show next
+    function slideRight() {
+      reset();
+      sliderImages[current + 1].style.display = "block";
+      current++;
+    }
+
+    // Left arrow click
+    arrowLeft.addEventListener("click", function () {
+      if (current === 0) {
+        current = sliderImages.length;
+      }
+      slideLeft();
+    });
+
+    // Right arrow click
+    arrowRight.addEventListener("click", function () {
+      if (current === sliderImages.length - 1) {
+        current = -1;
+      }
+      slideRight();
+    });
+
+    startSlide();
+  </script>
+
+  <h1 style="text-align:center">FEATURES</h1>
+
+  <div class="nav-5">
+
+    <img src="skillhome.png" alt="Avatar" width="178px">
+
+    <img src="noteslogo.png" alt="Avatar" width="178px">
+
+    <img src="quize.jpeg" alt="Avatar" width="178px">
+
+    <img src="course logo.png" alt="Avatar" width="178px">
+
+    <img src="shopping.png" alt="Avatar" width="178px">
+
+  </div>
+
+
+  <div class="nav-4">
+
+    <h3>
+
+      <a href="home.html" target="_blank">
+        <p> Home</p>
+      </a>
+    </h3>
+
+    <h3>
+      <a href="notes/cse.html" target="_blank">
+        <p>Notes</p>
+      </a>
+    </h3>
+
+    <h3>
+      <a href="https://www.javatpoint.com/discrete-mathematics-mcq" target="_blank">
+        <p> Quize </p>
+      </a>
+    </h3>
+
+    <h3>
+      <a href="course/course.html" target="_blank">
+        <p> Course </p>
+      </a>
+    </h3>
+
+    <h3>
+      <a href="project/onlinehomepage.html" target="_blank">
+        <p> Shoppings</p>
+      </a>
+    </h3>
+
+
+  </div>
+
+
+  <h1 style="text-align: center;">our team</h1>
+
+  <div class="nav-down">
+
+
+    <img src="sonali.jpeg" alt="Avatar" width="200px">
+
+    <img src="nishhh2.jpg" alt="Avatar" width="200px" height="200px">
+
+    <img src="madhu.jpeg" alt="Avatar" width="200px">
+
+  </div>
+
+
+
+  <div class="nam">
+
+    <h3>
+      <p> Sonali suman </p>
+    </h3>
+    <h3>
+      <p> Nisha kumari</p>
+    </h3>
+    <h3>
+      <p> Madhu kumari</p>
+    </h3>
+
+  </div>
+
+
+
+  <section class=" footer">
+    <div class="social">
+
+      <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+      <a href="#https://www.whatsapp.com/" target="_blank"><i class="fa fa-whatsapp"></i></a>
+      <a href="https://accounts.snapchat.com/accounts/login?continue=%2Faccounts%2Fwelcome" target="_blank"><i
+          class="fa fa-snapchat"></i></a>
+      <a href="https://twitter.com/?lang=en-in" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+
+    </div>
+    <ul class="list">
+
+      <li>
+        <a href="">home</a>
+      </li>
+
+      <li>
+        <a href="">services</a>
+      </li>
+
+      <li>
+        <a href="">about</a>
+      </li>
+
+      <li>
+        <a href="">terms</a>
+      </li>
+
+      <li>
+        <a href="">privacy policy</a>
+      </li>
+
+    </ul>
+
+
+
+
+    <h3>Design by Dream team</h3>
+
+
+
+  </section>
+
+
+
+
+
+
+</body>
+
+</html>
